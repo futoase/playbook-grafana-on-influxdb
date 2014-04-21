@@ -1,3 +1,4 @@
 ---
 - name: install the elasticsearch
-  yum: name=elasticsearch enablerepo=elasticsearch-0.90
+  yum: name=elasticsearch 
+       enablerepo=elasticsearch-0.90

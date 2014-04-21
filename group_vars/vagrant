@@ -1,3 +1,4 @@
-graphite:
-  username: graphite
-  password: graphite
+influxdb:
+  dbname: testdb
+  username: root
+  password: root

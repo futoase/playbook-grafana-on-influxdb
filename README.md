@@ -25,6 +25,20 @@ How to setup?
 > vagrant up --provision
 ```
 
+# connect to grafana on browser
+
+```
+> open http://192.168.33.55/
+```
+
+# connect to influxdb on browser
+
+- username:password is ```root:root```
+
+```
+> open http://192.168.33.55:8083/
+```
+
 # A list of references.
 
 - [Grafana on InfluxDB をちょっとだけ触ってみた](http://qiita.com/sonots/items/8fbc92ff1c3e57ee7de7)

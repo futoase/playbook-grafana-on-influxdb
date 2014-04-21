@@ -10,9 +10,9 @@ function (Settings) {
       influx: {
         default: true,
         type: 'influxdb',
-        url: 'http://'+window.location.hostname+':8086/db/testdb',
-        username: 'root',
-        password: 'root',
+        url: 'http://'+window.location.hostname+':8086/db/{{ influxdb.dbname }}',
+        username: '{{ influxdb.username }}',
+        password: '{{ influxdb.password }}',
       }
     },
 

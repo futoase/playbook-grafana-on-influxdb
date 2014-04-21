@@ -10,5 +10,9 @@
   shell: chown -R grafana:grafana /opt/grafana
 
 - name: rename file of config.sample.js to the config.js
-  copy: src=config.js dest=/opt/grafana/src/config.js owner=grafana group=grafana mode=0644
+  template: src=config.js 
+            dest=/opt/grafana/src/config.js 
+            owner=grafana 
+            group=grafana 
+            mode=0644
   notify: restart nginx
