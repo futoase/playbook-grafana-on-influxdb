@@ -1,0 +1,6 @@
+---
+- name: sleep 10s
+  command: sleep 10s
+
+- name: setup dabatase on influxdb
+  shell: "curl -X POST 'http://localhost:8086/db?u=root&p=root' -d '{\"name\": \"testdb\"}'"

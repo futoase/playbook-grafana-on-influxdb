@@ -1,0 +1,3 @@
+--- 
+- name: install the nginx
+  yum: name=nginx enablerepo=nginx state=latest

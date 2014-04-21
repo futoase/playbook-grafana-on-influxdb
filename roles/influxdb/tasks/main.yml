@@ -1,0 +1,4 @@
+---
+- include: install.yml
+- include: setup.yml
+- include: create_db.yml

@@ -1,0 +1,3 @@
+---
+- name: install yum package of influxdb from official
+  yum: name=http://s3.amazonaws.com/influxdb/influxdb-latest-1.x86_64.rpm

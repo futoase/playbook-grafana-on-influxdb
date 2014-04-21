@@ -1,0 +1,14 @@
+---
+- name: create user of grafana
+  user: name=grafana password=grafana
+
+- name: git clone of grafana from github
+  git: repo=https://github.com/torkelo/grafana.git
+       dest=/opt/grafana
+
+- name: change owner of files in /opt/grafana
+  shell: chown -R grafana:grafana /opt/grafana
+
+- name: rename file of config.sample.js to the config.js
+  copy: src=config.js dest=/opt/grafana/src/config.js owner=grafana group=grafana mode=0644
+  notify: restart nginx

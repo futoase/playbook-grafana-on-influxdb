@@ -1,0 +1,4 @@
+---
+- name: setup yum repository for nginx
+  copy: src=nginx.repo dest=/etc/yum.repos.d/nginx.repo owner=root group=root mode=0644 
+

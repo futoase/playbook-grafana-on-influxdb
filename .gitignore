@@ -1,0 +1,3 @@
+.vagrant/*
+packer/builds/*
+packer/packer_cache/*

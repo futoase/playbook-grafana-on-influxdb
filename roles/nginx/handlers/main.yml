@@ -1,0 +1,6 @@
+---
+- name: yum update
+  shell: yum -y update
+
+- name: restart nginx
+  service: name=nginx state=restarted

@@ -1,0 +1,18 @@
+---
+- name: set start of nginx after launch of machine
+  service: name=nginx state=started enabled=yes
+
+- name: remove default files of nginx
+  command: rm /etc/nginx/conf.d/{{ item }}
+  with_items:
+    - default.conf
+    - example_ssl.conf
+  ignore_errors: True
+
+- name: set config file of nginx for graphite
+  copy: src=graphite.conf dest=/etc/nginx/conf.d/graphite.conf owner=nginx group=nginx mode=0644
+  notify: restart nginx
+
+- name: set config file of nginx for grafana
+  copy: src=grafana.conf dest=/etc/nginx/conf.d/grafana.conf owner=nginx group=nginx mode=0644
+  notify: restart nginx

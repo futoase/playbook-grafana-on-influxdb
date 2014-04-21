@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: yes
+  roles:
+    - common
+    - java
+    - nginx
+    - influxdb
+    - elasticsearch
+    - grafana

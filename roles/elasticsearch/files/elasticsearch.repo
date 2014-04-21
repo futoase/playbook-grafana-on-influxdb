@@ -1,0 +1,6 @@
+[elasticsearch-0.90]
+name=Elasticsearch repository for 0.90.x packages
+baseurl=http://packages.elasticsearch.org/elasticsearch/0.90/centos
+gpgcheck=1
+gpgkey=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+enabled=1

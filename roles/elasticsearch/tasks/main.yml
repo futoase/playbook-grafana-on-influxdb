@@ -1,0 +1,3 @@
+---
+- include: rpm_key.yml
+- include: install.yml

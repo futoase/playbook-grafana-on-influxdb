@@ -1,0 +1,3 @@
+---
+- name: yum update
+  shell: yum -y update
