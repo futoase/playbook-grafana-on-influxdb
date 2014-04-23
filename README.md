@@ -25,6 +25,17 @@ How to setup?
 > vagrant up --provision
 ```
 
+# Deploy on self
+
+```
+> sudo yum localinstall http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+> sudo yum -y update
+> sudo yum install ansible python-setuptools
+> git clone git@github.com:futoase/playbook-grafana-on-influxdb-for-centos.git
+> cd playbook-grafana-on-influxdb-for-centos
+> ansible-playbook -c local -i localhost site.yml
+```
+
 # connect to grafana on browser
 
 ```

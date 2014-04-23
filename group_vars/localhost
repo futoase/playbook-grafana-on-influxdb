@@ -1,0 +1,4 @@
+influxdb:
+  dbname: testdb
+  username: root
+  password: root
