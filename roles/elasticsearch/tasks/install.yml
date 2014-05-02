@@ -1,7 +1,8 @@
 ---
 - name: install the elasticsearch on CentOS or RedHat
-  yum: name=elasticsearch 
-       enablerepo=elasticsearch-0.90
+  yum: name=elasticsearch
+       enablerepo=elasticsearch-1.1
+       state=latest
   when: ansible_distribution in ('RedHat', 'CentOS')
 
 - name: install the elasticsearch on Ubuntu or Debian
