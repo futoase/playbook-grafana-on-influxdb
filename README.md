@@ -1,5 +1,5 @@
-playbook-grafana-on-influxdb-for-centos
----------------------------------------
+playbook-grafana-on-influxdb
+----------------------------
 
 Will be install of the grafana and influxdb on CentOS or Ubuntu.
 
