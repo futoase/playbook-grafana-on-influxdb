@@ -4,3 +4,6 @@
 
 - name: apt-get update
   command: apt-get update
+
+- name: restart elasticsearch
+  service: name=elasticsearch state=restarted

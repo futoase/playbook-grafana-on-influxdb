@@ -1,0 +1,2 @@
+# source: https://github.com/elasticsearch/elasticsearch/blob/v1.1.1/config/elasticsearch.yml
+http.port: 9200
