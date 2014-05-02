@@ -1,7 +1,7 @@
 playbook-grafana-on-influxdb-for-centos
 ---------------------------------------
 
-Will be install of the grafana and influxdb on the CentOS.
+Will be install of the grafana and influxdb on CentOS or Ubuntu.
 
 # Prerequired
 
@@ -25,7 +25,7 @@ How to setup?
 > vagrant up --provision
 ```
 
-# Deploy on self
+# Deploy on self (CentOS)
 
 ```
 > sudo rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
