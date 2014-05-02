@@ -1,5 +1,12 @@
 --- 
-- name: install the nginx
+- name: install the nginx on CentOS
   yum: name=nginx 
        enablerepo=nginx 
        state=latest
+  when: ansible_distribution in ('RedHat', 'CentOS')
+
+- name: install the nginx on Ubuntu
+  apt: name=nginx
+       state=latest
+       force=yes
+  when: ansible_distribution in ('Debian', 'Ubuntu')

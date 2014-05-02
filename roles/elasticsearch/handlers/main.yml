@@ -1,3 +1,6 @@
 ---
 - name: yum update
   command: yum -y update
+
+- name: apt-get update
+  command: apt-get update

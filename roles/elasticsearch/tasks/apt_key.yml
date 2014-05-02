@@ -1,0 +1,4 @@
+---
+- name: setup public signing key of apt repository for elasticsearch
+  apt_key: url=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
+  notify: apt-get update

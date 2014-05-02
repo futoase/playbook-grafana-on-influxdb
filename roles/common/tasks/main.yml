@@ -1,3 +1,6 @@
 ---
-- include: epel.yml
-- include: ius.yml
+- include: centos.yml
+  when: ansible_distribution in ('RedHat', 'CentOS')
+
+- include: ubuntu.yml
+  when: ansible_distribution in ('Debian', 'Ubuntu')

@@ -2,3 +2,9 @@
 - name: install the java of openjdk
   yum: name=java-1.7.0-openjdk 
        state=latest
+  when: ansible_distribution in ('RedHat', 'CentOS')
+
+- name: install the java of openjdk
+  apt: name=openjdk-7-jdk
+       state=latest
+  when: ansible_distribution in ('Debian', 'Ubuntu')

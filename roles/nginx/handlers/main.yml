@@ -2,5 +2,8 @@
 - name: yum update
   shell: yum -y update
 
+- name: apt-get update
+  shell: apt-get -y update
+
 - name: restart nginx
   service: name=nginx state=restarted

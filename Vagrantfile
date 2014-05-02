@@ -60,7 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     centos.vm.provision :ansible do |ansible|
       ansible.playbook = "site.yml"
-      ansible.inventory_path = "vagrant.box"
+      ansible.inventory_path = "vagrant.box.centos"
       ansible.limit = "all"
       ansible.verbose = "vvvv"
     end
@@ -92,12 +92,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     ubuntu.vm.provision :ansible do |ansible|
       ansible.playbook = "site.yml"
-      ansible.inventory_path = "vagrant.box"
+      ansible.inventory_path = "vagrant.box.ubuntu"
       ansible.limit = "all"
       ansible.verbose = "vvvv"
     end
-
-    ubuntu.vm.provision :shell, inline: $stop_iptables
 
   end
 

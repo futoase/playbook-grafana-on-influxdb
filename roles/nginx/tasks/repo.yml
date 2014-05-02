@@ -5,4 +5,19 @@
         owner=root 
         group=root 
         mode=0644 
+  when: ansible_distribution in ('RedHat', 'CentOS')
 
+- name: setup apt key for nginx
+  apt_key: url=http://nginx.org/keys/nginx_signing.key
+           state=present
+  notify: apt-get update
+  when: ansible_distribution in ('Debian', 'Ubuntu')
+
+- name: setup apt repository for nginx
+  apt_repository: repo='{{ item }} http://nginx.org/packages/ubuntu/ precise nginx'
+                  state=present
+  with_items:
+    - deb
+    - deb-src
+  notify: apt-get update
+  when: ansible_distribution in ('Debian', 'Ubuntu')
