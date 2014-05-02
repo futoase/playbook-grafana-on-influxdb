@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 BOX_SAVE_DIR = File.expand_path("~/.box")
 
 BOX_NAMES = {
-  "centos" => "CentOS-6.5-x86_64-mininal",
+  "centos" => "CentOS-6.5-x86_64-minimal",
   "ubuntu" => "Ubuntu-12.04-x86_64"
 }
 
