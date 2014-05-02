@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Playbook-grafana-on-influxdb by futoase</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/futoase/playbook-grafana-on-influxdb">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/futoase/playbook-grafana-on-influxdb/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/futoase/playbook-grafana-on-influxdb/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Playbook-grafana-on-influxdb</h1>
+          <p>ansible playbook of install grafana on centos or ubuntu.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/futoase">futoase</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h2>
+<a name="playbook-grafana-on-influxdb" class="anchor" href="#playbook-grafana-on-influxdb"><span class="octicon octicon-link"></span></a>playbook-grafana-on-influxdb</h2>
+
+<p>Will be install of the grafana and influxdb on CentOS or Ubuntu.</p>
+
+<h1>
+<a name="prerequired" class="anchor" href="#prerequired"><span class="octicon octicon-link"></span></a>Prerequired</h1>
+
+<ul>
+<li><a href="http://www.ansible.com/">ansible</a></li>
+<li><a href="http://www.packer.io/">packer</a></li>
+<li><a href="http://www.vagrantup.com/">vagrant</a></li>
+<li><a href="https://www.virtualbox.org/">virtualbox</a></li>
+</ul><h2>
+<a name="how-to-setup" class="anchor" href="#how-to-setup"><span class="octicon octicon-link"></span></a>How to setup?</h2>
+
+<h1>
+<a name="setup-of-required-package-on-the-mac-os-x" class="anchor" href="#setup-of-required-package-on-the-mac-os-x"><span class="octicon octicon-link"></span></a>Setup of required package on the Mac OS X</h1>
+
+<pre><code>&gt; brew bundle
+</code></pre>
+
+<h1>
+<a name="deploy-on-vagrant-box" class="anchor" href="#deploy-on-vagrant-box"><span class="octicon octicon-link"></span></a>Deploy on vagrant box</h1>
+
+<pre><code>&gt; vagrant up --provision
+</code></pre>
+
+<h1>
+<a name="deploy-on-self-centos" class="anchor" href="#deploy-on-self-centos"><span class="octicon octicon-link"></span></a>Deploy on self (CentOS)</h1>
+
+<pre><code>&gt; sudo rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+&gt; sudo yum -y update
+&gt; sudo yum install ansible python-setuptools
+&gt; git clone git@github.com:futoase/playbook-grafana-on-influxdb-for-centos.git
+&gt; cd playbook-grafana-on-influxdb-for-centos
+&gt; ansible-playbook -c local -i localhost site.yml
+</code></pre>
+
+<h1>
+<a name="connect-to-grafana-on-browser" class="anchor" href="#connect-to-grafana-on-browser"><span class="octicon octicon-link"></span></a>connect to grafana on browser</h1>
+
+<pre><code>&gt; open http://192.168.33.55/
+</code></pre>
+
+<h1>
+<a name="connect-to-influxdb-on-browser" class="anchor" href="#connect-to-influxdb-on-browser"><span class="octicon octicon-link"></span></a>connect to influxdb on browser</h1>
+
+<ul>
+<li>username:password is <code>root:root</code>
+</li>
+</ul><pre><code>&gt; open http://192.168.33.55:8083/
+</code></pre>
+
+<h1>
+<a name="a-list-of-references" class="anchor" href="#a-list-of-references"><span class="octicon octicon-link"></span></a>A list of references.</h1>
+
+<ul>
+<li><a href="http://qiita.com/sonots/items/8fbc92ff1c3e57ee7de7">Grafana on InfluxDB をちょっとだけ触ってみた</a></li>
+<li><a href="http://qiita.com/hakobera/items/fbe7669a1c2b763bcd8d">InfluxDB と fluentd を組み合わせを試してみた</a></li>
+<li><a href="http://qiita.com/ixixi/items/a56ea15b582c7f014a57">InfluxDBとGrafanaとfluentdで、twitterデータのリアルタイム集計・可視化</a></li>
+<li><a href="http://qiita.com/chobie@github/items/c8220d9352df90963862">InfluxDB試してみた</a></li>
+</ul><h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>MIT.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
