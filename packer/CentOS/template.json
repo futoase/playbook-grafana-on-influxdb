@@ -62,7 +62,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "./builds/CentOS-6.5-x86_64-mininal.box"
+      "output": "./builds/CentOS-6.5-x86_64-minimal.box"
     }
   ]
 }
