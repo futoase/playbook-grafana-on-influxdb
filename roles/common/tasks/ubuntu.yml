@@ -1,0 +1,5 @@
+---
+- include: ubuntu/build-essential.yml
+- include: ubuntu/pycurl.yml
+- include: ubuntu/curl.yml
+- include: ubuntu/git.yml

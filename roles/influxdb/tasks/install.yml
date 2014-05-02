@@ -1,3 +1,12 @@
 ---
 - name: install yum package of influxdb from official
   yum: name=http://s3.amazonaws.com/influxdb/influxdb-latest-1.x86_64.rpm
+  when: ansible_distribution in ('RedHat', 'CentOS')
+
+- name: get package of influxdb from official
+  get_url: url=http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb
+           dest=/tmp/influxdb_latest_amd64.deb
+
+- name: install deb package of influxdb from official
+  shell: dpkg -i /tmp/influxdb_latest_amd64.deb
+  when: ansible_distribution in ('Debian', 'Ubuntu')

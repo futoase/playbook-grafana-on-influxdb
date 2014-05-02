@@ -1,0 +1,3 @@
+---
+- name: install the python-pycurl
+  apt: name=python-pycurl state=latest

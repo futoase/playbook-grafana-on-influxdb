@@ -1,0 +1,3 @@
+---
+- name: install the curl
+  apt: name=curl state=latest

@@ -1,0 +1,3 @@
+---
+- name: install the build-essential
+  apt: name=build-essential state=latest
