@@ -1,0 +1,3 @@
+[submodule "packer-template"]
+	path = packer-template
+	url = https://github.com/futoase/packer-template.git
