@@ -19,6 +19,13 @@ How to setup?
 > brew bundle
 ```
 
+# Create vagrant box
+
+```
+./build_box.sh centos # for CentOS 6.5(x86_64)
+./build_box.sh ubuntu # for Ubuntu 12.04(x86_64)
+```
+
 # Deploy on vagrant box
 
 ```
