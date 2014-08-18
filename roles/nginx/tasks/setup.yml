@@ -12,9 +12,9 @@
   ignore_errors: True
 
 - name: set config file of nginx for grafana
-  copy: src=grafana.conf 
-        dest=/etc/nginx/conf.d/grafana.conf 
-        owner=nginx 
-        group=nginx 
-        mode=0644
+  template: src=grafana.conf 
+             dest=/etc/nginx/conf.d/grafana.conf 
+             owner=nginx 
+             group=nginx 
+             mode=0644
   notify: restart nginx

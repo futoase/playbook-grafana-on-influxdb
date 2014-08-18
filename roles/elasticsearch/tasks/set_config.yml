@@ -1,4 +1,0 @@
----
-- name: update config of elasticsearch.yml
-  copy: src=elasticsearch.yml dest=/etc/elasticsearch/elasticsearch.yml
-  notify: restart elasticsearch

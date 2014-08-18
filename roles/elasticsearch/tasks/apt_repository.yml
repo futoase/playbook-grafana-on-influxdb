@@ -1,4 +1,0 @@
----
-- name: setup the apt-repository
-  apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/1.1/debian stable main'
-  notify: apt-get update
