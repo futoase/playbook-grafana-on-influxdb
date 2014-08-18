@@ -1,0 +1,4 @@
+---
+grafana:
+  dbname: grafana
+  vars: 1.7.0

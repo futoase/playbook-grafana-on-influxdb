@@ -2,16 +2,24 @@
 - name: create user of grafana
   user: name=grafana password=grafana
 
-- name: git clone of grafana from github
-  git: repo=https://github.com/torkelo/grafana.git
-       dest=/opt/grafana
+- name: download grafana from official site.
+  get_url: url=http://grafanarel.s3.amazonaws.com/grafana-{{ grafana.vars }}.tar.gz
+           dest=/tmp/grafana-{{ grafana.vars }}.tar.gz
 
-- name: change owner of files in /opt/grafana
-  shell: chown -R grafana:grafana /opt/grafana
+- name: mkdir of grafana
+  file: state=directory
+        path=/opt
+        owner=grafana
+        group=grafana
+
+- name: unarchive of grafana
+  unarchive: src=/tmp/grafana-{{ grafana.vars }}.tar.gz
+             dest=/opt
+             copy=no
 
 - name: rename file of config.sample.js to the config.js
   template: src=config.js 
-            dest=/opt/grafana/src/config.js 
+            dest=/opt/grafana-{{ grafana.vars }}/config.js 
             owner=grafana 
             group=grafana 
             mode=0644

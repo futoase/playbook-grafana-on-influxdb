@@ -1,4 +1,3 @@
 ---
 - name: setup start of service influxdb after launch of machine
   service: name=influxdb state=started enabled=yes
-

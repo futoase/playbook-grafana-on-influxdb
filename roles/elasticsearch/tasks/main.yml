@@ -1,9 +1,0 @@
----
-- include: rpm_key.yml
-  when: ansible_distribution in ('RedHat', 'CentOS')
-- include: apt_key.yml
-  when: ansible_distribution in ('Debian', 'Ubuntu')
-- include: apt_repository.yml
-  when: ansible_distribution in ('Debian', 'Ubuntu')
-- include: install.yml
-- include: set_config.yml

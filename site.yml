@@ -1,10 +1,11 @@
 ---
 - hosts: all
   sudo: yes
+  vars_files:
+    - 'vars/grafana.yml'
+    - 'vars/influxdb.yml'
   roles:
     - common
-    - java
     - nginx
     - influxdb
-    - elasticsearch
     - grafana
