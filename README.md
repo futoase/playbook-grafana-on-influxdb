@@ -13,26 +13,29 @@ Will be install of the grafana and influxdb on CentOS or Ubuntu.
 How to setup?
 -------------
 
-# Setup of required package on the Mac OS X
+# On Vagrant 
+
+## Setup of required package on the Mac OS X
 
 ```
 > brew bundle
 ```
 
-# Create vagrant box
+## Download Vagrant-box of Ubuntu 14.04 LTS from Hashcorp.
 
 ```
-./build_box.sh centos # for CentOS 6.5(x86_64)
-./build_box.sh ubuntu # for Ubuntu 12.04(x86_64)
+> vagrant box add ubuntu/trusty64
 ```
 
-# Deploy on vagrant box
+## Deploy on vagrant box
 
 ```
 > vagrant up --provision
 ```
 
-# Deploy on self (CentOS)
+# Deploy on self 
+
+## On CentOS
 
 ```
 > sudo rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
@@ -43,18 +46,20 @@ How to setup?
 > ansible-playbook -c local -i localhost site.yml
 ```
 
-# connect to grafana on browser
+# Connecting on Vagrant box
+
+## Grafana on browser
 
 ```
-> open http://192.168.33.55/
+> open http://192.168.33.56/
 ```
 
-# connect to influxdb on browser
+## influxDB on browser
 
 - username:password is ```root:root```
 
 ```
-> open http://192.168.33.55:8083/
+> open http://192.168.33.56:8083/
 ```
 
 # A list of references.
@@ -67,3 +72,7 @@ How to setup?
 # License
 
 MIT.
+
+# Author
+
+2015 (c) Keiji Matsuzaki.
