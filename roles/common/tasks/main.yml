@@ -1,6 +1,6 @@
 ---
 - include: centos.yml
-  when: ansible_distribution in ('RedHat', 'CentOS')
+  when: ansible_distribution in ('RedHat', 'CentOS', 'Scientific')
 
 - include: ubuntu.yml
   when: ansible_distribution in ('Debian', 'Ubuntu')
