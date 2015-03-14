@@ -5,11 +5,10 @@
            enabled=yes
 
 - name: remove default files of nginx
-  command: rm /etc/nginx/conf.d/{{ item }}
+  file: path=/etc/nginx/conf.d/{{ item }} state=absent
   with_items:
     - default.conf
     - example_ssl.conf
-  ignore_errors: True
 
 - name: set config file of nginx for grafana
   template: src=grafana.conf 
