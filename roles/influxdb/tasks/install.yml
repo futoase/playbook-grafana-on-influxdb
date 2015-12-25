@@ -4,7 +4,7 @@
   when: ansible_distribution in ('RedHat', 'CentOS', 'Scientific')
 
 - name: get package of influxdb from official
-  get_url: url=http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb
+  get_url: url=http://s3.amazonaws.com/influxdb/influxdb_0.9.5-s1_amd64.deb
            dest=/tmp/influxdb_latest_amd64.deb
 
 - name: install deb package of influxdb from official
